@@ -24,11 +24,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.BusinessLogi
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Excellence.Ims.Database", "Excellence.Ims.Database\Excellence.Ims.Database.sqlproj", "{386CFE72-F0B8-460C-9B6E-ADB3D6241CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.Console", "Excellence.Ims.Console\Excellence.Ims.Console.csproj", "{C5668418-B388-469A-B355-8000A82038D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.Console", "Excellence.Ims.Console\Excellence.Ims.Console.csproj", "{C5668418-B388-469A-B355-8000A82038D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.Web", "Excellence.Ims.Web\Excellence.Ims.Web.csproj", "{B5FEF03C-8423-4CD5-9C8B-AA5904E67DC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.Web", "Excellence.Ims.Web\Excellence.Ims.Web.csproj", "{B5FEF03C-8423-4CD5-9C8B-AA5904E67DC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims", "Excellence.Ims\Excellence.Ims.csproj", "{7882AC8B-DCC1-4A8B-BE5B-8A95CAFF9F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims", "Excellence.Ims\Excellence.Ims.csproj", "{7882AC8B-DCC1-4A8B-BE5B-8A95CAFF9F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.Main", "Excellence.Ims.Main\Excellence.Ims.Main.csproj", "{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,6 +242,26 @@ Global
 		{7882AC8B-DCC1-4A8B-BE5B-8A95CAFF9F69}.Release|x64.Build.0 = Release|Any CPU
 		{7882AC8B-DCC1-4A8B-BE5B-8A95CAFF9F69}.Release|x86.ActiveCfg = Release|Any CPU
 		{7882AC8B-DCC1-4A8B-BE5B-8A95CAFF9F69}.Release|x86.Build.0 = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|ARM.Build.0 = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|ARM.Build.0 = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|ARM64.Build.0 = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|x64.Build.0 = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
