@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="IModel" Category="Model" Annotations="Relational:MaxIdentifierLength: 128 SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="0,0,942.253333333333,501.72" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="DatabaseContext" ProductVersion="3.1.8" PropertyAccessMode="PropertyAccessMode.Default" />
+    <Node Id="Item" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Items" BaseClass="" Bounds="331,283.84,280.253333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Item" Name="Item" />
+    <Node Id="Item.DateCreated" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="351,379.8,86.26,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="DateCreated" MaxLength="None" Name="DateCreated" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Item.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="511,323.84,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Item.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="351,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Item.PurchaseOrder_Items" Category="Navigation Collection" Bounds="351,435.76,147.706666666667,25.96" Dependent="PurchaseOrder_Item" Field="" Inverse="Item" Label="PurchaseOrder_Items (*)" Name="PurchaseOrder_Items" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="IList&lt;PurchaseOrder_Item&gt;" />
+    <Node Id="Item.Title" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="431,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Title" MaxLength="None" Name="Title" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Item_Product" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Item_Product" BaseClass="" Bounds="93.5116666666667,40.0000000000001,207.23,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Item_Product" Name="Item_Product" />
+    <Node Id="Item_Product.Item" Category="Navigation Property" Bounds="197.645,80.0000000000001,60.87,25.96" Dependent="" Field="" Inverse="" Label="Item (1)" Name="Item" Principal="Item" PropertyAccessMode="PropertyAccessMode.Default" Type="Item" />
+    <Node Id="Item_Product.ItemId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="113.511666666667,80.0000000000001,54.1333333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ItemId" MaxLength="None" Name="ItemId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Item_Product.Product" Category="Navigation Property" Bounds="113.511666666667,191.92,78.3866666666667,25.96" Dependent="" Field="" Inverse="" Label="Product (1)" Name="Product" Principal="Product" PropertyAccessMode="PropertyAccessMode.Default" Type="Product" />
+    <Node Id="Item_Product.ProductId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="209.091666666667,135.96,71.65,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ProductId" MaxLength="None" Name="ProductId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Item_Product.Quantity" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="113.511666666667,135.96,65.58,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Quantity" MaxLength="None" Name="Quantity" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Product" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Products" BaseClass="" Bounds="20,283.84,280.253333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Product" Name="Product" />
+    <Node Id="Product.DateCreated" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,379.8,86.26,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="DateCreated" MaxLength="None" Name="DateCreated" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Product.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="200,323.84,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Product.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Product.PurchaseOrder_Items" Category="Navigation Collection" Bounds="40,435.76,147.706666666667,25.96" Dependent="PurchaseOrder_Item" Field="" Inverse="" Label="PurchaseOrder_Items (*)" Name="PurchaseOrder_Items" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="IList&lt;PurchaseOrder_Item&gt;" />
+    <Node Id="Product.Title" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="120,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Title" MaxLength="None" Name="Title" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="PurchaseOrder" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: PurchaseOrders" BaseClass="" Bounds="642,283.84,280.253333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="PurchaseOrder" Name="PurchaseOrder" />
+    <Node Id="PurchaseOrder.DateCreated" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="662,379.8,86.26,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="DateCreated" MaxLength="None" Name="DateCreated" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="PurchaseOrder.Description" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="822,323.84,80.2533333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="None" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="PurchaseOrder.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="662,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="PurchaseOrder.PurchaseOrder_Items" Category="Navigation Collection" Bounds="662,435.76,147.706666666667,25.96" Dependent="PurchaseOrder_Item" Field="" Inverse="PurchaseOrder" Label="PurchaseOrder_Items (*)" Name="PurchaseOrder_Items" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="IList&lt;PurchaseOrder_Item&gt;" />
+    <Node Id="PurchaseOrder.Title" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="742,323.84,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Title" MaxLength="None" Name="Title" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="PurchaseOrder_Item" Category="EntityType" Annotations="" BaseClass="" Bounds="330.835,40,280.583333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="PurchaseOrder_Item" Name="PurchaseOrder_Item" />
+    <Node Id="PurchaseOrder_Item.Item" Category="Navigation Property" Bounds="434.968333333333,80,60.87,25.96" Dependent="" Field="" Inverse="PurchaseOrder_Items" Label="Item (1)" Name="Item" Principal="Item" PropertyAccessMode="PropertyAccessMode.Default" Type="Item" />
+    <Node Id="PurchaseOrder_Item.ItemId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="350.835,80,54.1333333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ItemId" MaxLength="None" Name="ItemId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="PurchaseOrder_Item.ProductId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="350.835,135.96,71.65,25.96" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="ProductId" MaxLength="None" Name="ProductId" PropertyAccessMode="PropertyAccessMode.Default" Type="Nullable&lt;int&gt;" ValueGenerated="None" />
+    <Node Id="PurchaseOrder_Item.PurchaseOrder" Category="Navigation Property" Bounds="350.835,191.92,115.226666666667,25.96" Dependent="" Field="" Inverse="PurchaseOrder_Items" Label="PurchaseOrder (1)" Name="PurchaseOrder" Principal="PurchaseOrder" PropertyAccessMode="PropertyAccessMode.Default" Type="PurchaseOrder" />
+    <Node Id="PurchaseOrder_Item.PurchaseOrderId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="452.485,135.96,108.49,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PurchaseOrderId" MaxLength="None" Name="PurchaseOrderId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="PurchaseOrder_Item.Quantity" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="525.838333333333,80,65.5799999999999,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Quantity" MaxLength="None" Name="Quantity" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="IModel" Target="Item" Category="Contains" />
+    <Link Source="IModel" Target="Item_Product" Category="Contains" />
+    <Link Source="IModel" Target="Product" Category="Contains" />
+    <Link Source="IModel" Target="PurchaseOrder" Category="Contains" />
+    <Link Source="IModel" Target="PurchaseOrder_Item" Category="Contains" />
+    <Link Source="Item" Target="Item.DateCreated" Category="Contains" />
+    <Link Source="Item" Target="Item.Description" Category="Contains" />
+    <Link Source="Item" Target="Item.Id" Category="Contains" />
+    <Link Source="Item" Target="Item.PurchaseOrder_Items" Category="Contains" />
+    <Link Source="Item" Target="Item.Title" Category="Contains" />
+    <Link Source="Item_Product" Target="Item" Category="Foreign Key" Annotations="" Bounds="300.741668701172,231.149780273438,52.484130859375,46.7070617675781" From="Item_Product.ItemId" IsUnique="False" Label="1:*" LabelBounds="320.053333333333,252.88,14.0733333333334,15.96" Name="Item_Product -&gt; Item" To="Item.Id" />
+    <Link Source="Item_Product" Target="Item_Product.Item" Category="Contains" />
+    <Link Source="Item_Product" Target="Item_Product.ItemId" Category="Contains" />
+    <Link Source="Item_Product" Target="Item_Product.Product" Category="Contains" />
+    <Link Source="Item_Product" Target="Item_Product.ProductId" Category="Contains" />
+    <Link Source="Item_Product" Target="Item_Product.Quantity" Category="Contains" />
+    <Link Source="Item_Product" Target="Product" Category="Foreign Key" Annotations="" Bounds="176.489898681641,237.880004882813,5.62373352050781,37.0618591308594" From="Item_Product.ProductId" IsUnique="False" Label="1:*" LabelBounds="178.626666666667,252.88,14.0733333333333,15.96" Name="Item_Product -&gt; Product" To="Product.Id" />
+    <Link Source="Product" Target="Product.DateCreated" Category="Contains" />
+    <Link Source="Product" Target="Product.Description" Category="Contains" />
+    <Link Source="Product" Target="Product.Id" Category="Contains" />
+    <Link Source="Product" Target="Product.PurchaseOrder_Items" Category="Contains" />
+    <Link Source="Product" Target="Product.Title" Category="Contains" />
+    <Link Source="PurchaseOrder" Target="PurchaseOrder.DateCreated" Category="Contains" />
+    <Link Source="PurchaseOrder" Target="PurchaseOrder.Description" Category="Contains" />
+    <Link Source="PurchaseOrder" Target="PurchaseOrder.Id" Category="Contains" />
+    <Link Source="PurchaseOrder" Target="PurchaseOrder.PurchaseOrder_Items" Category="Contains" />
+    <Link Source="PurchaseOrder" Target="PurchaseOrder.Title" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="Item" Category="Foreign Key" Annotations="" Bounds="471.126678466797,237.880004882813,0,36.9599914550781" From="PurchaseOrder_Item.ItemId" IsUnique="False" Label="1:*" LabelBounds="457.053333333333,252.88,14.0733333333334,15.96" Name="PurchaseOrder_Item -&gt; Item" To="Item.Id" />
+    <Link Source="PurchaseOrder_Item" Target="Product" Category="Foreign Key" Annotations="" Bounds="269.207641601563,230.794250488281,61.6273498535156,47.2406005859375" From="PurchaseOrder_Item.ProductId" IsUnique="False" Label="1:*" LabelBounds="267.98,252.88,14.0733333333333,15.96" Name="PurchaseOrder_Item -&gt; Product" To="Product.Id" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder" Category="Foreign Key" Annotations="" Bounds="597.3173828125,237.880004882813,51.5360107421875,40.4068908691406" From="PurchaseOrder_Item.PurchaseOrderId" IsUnique="False" Label="1:*" LabelBounds="612.553333333333,252.88,14.0733333333334,15.96" Name="PurchaseOrder_Item -&gt; PurchaseOrder" To="PurchaseOrder.Id" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.Item" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.ItemId" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.ProductId" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.PurchaseOrder" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.PurchaseOrderId" Category="Contains" />
+    <Link Source="PurchaseOrder_Item" Target="PurchaseOrder_Item.Quantity" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
