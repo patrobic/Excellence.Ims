@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0-rc.1.20451.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0-rc.1.20451.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0-rc.1.20451.13">
       <PrivateAssets>all</PrivateAssets>
@@ -30,7 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Tables\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>
