@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Warranty]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Title] VARCHAR(MAX) NOT NULL,
+	[Years] INT NOT NULL
+)

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[AttributeCategory]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Title] VARCHAR(MAX) NOT NULL,
+)

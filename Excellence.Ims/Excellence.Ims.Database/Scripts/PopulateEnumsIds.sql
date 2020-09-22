@@ -1,0 +1,60 @@
+﻿--INSERT INTO [Type](Id, Title)
+--VALUES
+--(1, 'Simple'),
+--(2, 'Variable'),
+--(3, 'Variation');
+
+--INSERT INTO [ShippingClass](Id, Title)
+--VALUES
+--(1, 'Small'),
+--(2, 'Standard'),
+--(3, 'Large');
+
+--INSERT INTO [Warranty](Id, Title, Years)
+--VALUES
+--(1, '1 Year Warranty', 1),
+--(2, '2 Year Warranty', 2),
+--(3, '3 Year Warranty', 3),
+--(4, '4 Year Warranty', 4),
+--(5, '5 Year Warranty', 5);
+
+--INSERT INTO [AttributeCategory](Id, Title)
+--VALUES
+--(1, 'Includes'),
+--(2, 'Lighting'),
+--(3, 'Controller'),
+--(4, 'Power Supply'),
+--(5, 'Fixture');
+
+--INSERT INTO [AttributeName](Id, Title, CategoryId)
+--VALUES
+--(1, 'Lighting', 1),
+--(2, 'Controller', 1),
+--(3, 'Power Supply', 1),
+--(4, 'Fixtures', 1),
+--(5, 'Accessories', 1),
+--(6, 'Dimensions', 2),
+--(7, 'Chip Type', 2),
+--(8, 'Power Rating', 2),
+--(9, 'Color Support', 2),
+--(10, 'White Temperature', 2),
+--(11, 'Chip Density', 2),
+--(12, 'Brightness', 2),
+--(13, 'CRI Rating', 2),
+--(14, 'IP Rating', 2),
+--(15, 'Cut Interval', 2),
+--(16, 'Backing', 2),
+--(17, 'Lifespan', 2),
+--(18, 'Warranty', 2),
+--(19, 'Type', 3),
+--(20, 'Channels', 3),
+--(21, 'Connectivity', 3),
+--(22, 'Included Remote', 3),
+--(23, 'Compatible Smart Home Assistants', 3),
+--(24, 'Power Rating', 4),
+--(25, 'Input', 4),
+--(26, 'Connector', 4),
+--(27, 'Material', 5),
+--(28, 'Profile Type', 5),
+--(29, 'Diffuser Material', 5),
+--(30, 'Coverage Angle', 5

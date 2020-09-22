@@ -1,0 +1,50 @@
+# Code First
+## Enable Migrations
+	Set Package Manager Console project to ...DataAccess
+	EntityFrameworkCore\Enable-Migrations
+
+## Add Database Migration
+	Set Package Manager Console project to ...DataAccess
+	EntityFrameworkCore\Add-Migration 0001-InitialMigration
+
+## Update Database (Publish)
+	Set Package Manager Console project to ...DataAccess
+	EntityFrameworkCore\Update-Database –verbose
+
+## Reverse Engineer (From DB)
+	Right Click Project
+	Select "EF Core Power Tools"
+	Click "Reverse Engineer"
+	Select Excellence.Ims.Database from "Choose SQL Server Database Project (.dacpac)"
+	Check "Use EF Core 5 (preview)" and click ok
+
+## Using WebApp Project
+	Running the WebApp project will automatically publish the database and any new changes(?)
+	To publish the database, the proposed solution is
+		1) Add Migration on DataAccess Project (updates the local DB model)
+		2) Run the WebApp Project (publishes the updated model to the server DB)
+	
+# Database First
+## Publish Database
+	Right Click Project
+	Click "Publish..."
+	Fill in the server information
+	
+	OR just double click Excellence.Ims.Database.publish.xml
+
+## Create Diagram
+	Right Click Project
+	Select "EF Core Power Tools"
+	Click "Add DbContext Model Diagram"
+	Open the created .dgml file
+
+# Razor Pages
+## Create Scaffolding
+	Create a Students folder in the Pages folder.
+	In Solution Explorer, right-click the Pages/Students folder and select Add > New Scaffolded Item.
+	In the Add Scaffold dialog, select Razor Pages using Entity Framework (CRUD) > ADD.
+	In the Add Razor Pages using Entity Framework (CRUD) dialog:
+	In the Model class drop-down, select Student (ContosoUniversity.Models).
+	In the Data context class row, select the + (plus) sign.
+	Change the data context name from ContosoUniversity.Models.ContosoUniversityContext to ContosoUniversity.Data.SchoolContext.
+	Select Add.

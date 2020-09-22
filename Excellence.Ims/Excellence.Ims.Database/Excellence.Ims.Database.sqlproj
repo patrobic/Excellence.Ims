@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Excellence.Ims.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{386cfe72-f0b8-460c-9b6e-adb3d6241cab}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Excellence.Ims.Database</RootNamespace>
+    <AssemblyName>Excellence.Ims.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Functions" />
+    <Folder Include="Scripts" />
+    <Folder Include="Tables\Product" />
+    <Folder Include="Tables\PurchaseOrder" />
+    <Folder Include="Tables\SalesOrder" />
+    <Folder Include="Tables\ManufactureOrder" />
+    <Folder Include="Tables\Location" />
+    <Folder Include="Tables\Entities" />
+    <Folder Include="Tables\Category" />
+    <Folder Include="Tables\Stock" />
+    <Folder Include="Tables\WooCommerce" />
+    <Folder Include="Tables\Product_Joins" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Views\ProductStock.sql" />
+    <Build Include="Tables\Product\Product.sql" />
+    <Build Include="Tables\Product\Item.sql" />
+    <Build Include="Tables\PurchaseOrder\PurchaseOrder.sql" />
+    <Build Include="Tables\PurchaseOrder\PurchaseOrder_Item.sql" />
+    <Build Include="Tables\ManufactureOrder\ManufactureOrder.sql" />
+    <Build Include="Tables\ManufactureOrder\ManufactureOrder_Product.sql" />
+    <Build Include="Tables\Location\StorageLocation.sql" />
+    <Build Include="Tables\Category\Category.sql" />
+    <Build Include="Tables\SalesOrder\SalesOrder.sql" />
+    <Build Include="Tables\SalesOrder\SalesOrder_Product.sql" />
+    <Build Include="Tables\Entities\Project.sql" />
+    <Build Include="Tables\Entities\Supplier.sql" />
+    <Build Include="Tables\Entities\Client.sql" />
+    <Build Include="Tables\Location\StorageLocation_Item.sql" />
+    <Build Include="Tables\Location\StorageLocation_Product.sql" />
+    <Build Include="Tables\Stock\UpcCode.sql" />
+    <Build Include="Tables\Stock\StockAdjustment.sql" />
+    <Build Include="Tables\Product\ProductRetail.sql" />
+    <Build Include="Tables\WooCommerce\Type.sql" />
+    <Build Include="Tables\Category\Tag.sql" />
+    <Build Include="Tables\WooCommerce\Warranty.sql" />
+    <Build Include="Tables\WooCommerce\ShippingClass.sql" />
+    <Build Include="Tables\Category\Attribute.sql" />
+    <Build Include="Tables\Product_Joins\Product_Attribute.sql" />
+    <Build Include="Tables\Product_Joins\Product_Category.sql" />
+    <Build Include="Tables\Product_Joins\Product_Cross-sells.sql" />
+    <Build Include="Tables\Product_Joins\Product_Tag.sql" />
+    <Build Include="Tables\Product_Joins\Product_Upsells.sql" />
+    <Build Include="Tables\Category\AttributeName.sql" />
+    <Build Include="Tables\Category\AttributeCategory.sql" />
+    <Build Include="Views\OpenSalesOrder.sql" />
+    <PostDeploy Include="Scripts\PopulateEnums.sql" />
+    <Build Include="Scripts\ExcellenceImsDb.sql" />
+    <None Include="Scripts\PopulateEnumsIds.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Product\Item_Product.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Excellence.Ims.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Script.PreDeployment1.sql" />
+  </ItemGroup>
+</Project>

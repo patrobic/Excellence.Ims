@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[UpcCode]
+(
+	[Id] INT NOT NULL PRIMARY KEY
+)

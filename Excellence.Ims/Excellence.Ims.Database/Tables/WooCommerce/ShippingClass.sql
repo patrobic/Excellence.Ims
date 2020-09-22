@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[ShippingClass]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Title] VARCHAR(MAX) NOT NULL,
+)
