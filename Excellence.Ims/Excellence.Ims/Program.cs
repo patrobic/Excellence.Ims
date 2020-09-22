@@ -30,7 +30,7 @@ namespace Excellence.Ims
 
                 try
                 {
-                    var context = services.GetRequiredService<ApplicationDbContext>();
+                    var context = services.GetRequiredService<DatabaseContext>();
                     context.Database.EnsureCreated();
                 }
                 catch (Exception ex)
