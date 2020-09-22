@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.BusinessLogi
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Excellence.Ims.Database", "Excellence.Ims.Database\Excellence.Ims.Database.sqlproj", "{386CFE72-F0B8-460C-9B6E-ADB3D6241CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.Main", "Excellence.Ims.Main\Excellence.Ims.Main.csproj", "{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.WebApp", "Excellence.Ims.WebApp\Excellence.Ims.WebApp.csproj", "{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
