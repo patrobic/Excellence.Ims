@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Excellence.Ims.Main.Data;
 using Excellence.Ims.DataAccess;
 
 namespace Excellence.Ims
