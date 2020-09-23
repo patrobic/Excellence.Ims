@@ -7,9 +7,10 @@ namespace Excellence.Ims.DataAccess.Tables.Supply
 {
     public class Item_Product
     {
-        [Key]
-        public ICollection<Item> Item { get; set; }
-        [Key]
-        public ICollection<Product> Product { get; set; }
+        public int ItemId { get; set; }
+        public virtual Item Item { get; set; }
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
+        public int Quantity { get; set; }
     }
 }

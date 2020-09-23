@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Retail
 {
-    public class Type : Base
+    public class Type : BaseNamed
     {
 
     }

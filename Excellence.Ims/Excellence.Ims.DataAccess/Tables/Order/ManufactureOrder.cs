@@ -1,17 +1,16 @@
-﻿using Excellence.Ims.DataAccess.Tables.Supply;
+﻿using Excellence.Ims.DataAccess.Tables.Contact;
+using Excellence.Ims.DataAccess.Tables.Entity;
+using Excellence.Ims.DataAccess.Tables.Supply;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Order
 {
-    public class ManufactureOrder : BaseOrder<ManufactureOrder, Product>
+    public class ManufactureOrder : BaseOrder
     {
-
-    }
-
-    public class ManufactureOrderLine : BaseOrderLine<ManufactureOrder, Product>
-    {
-
+        public virtual ICollection<ManufactureOrderLine> Lines { get; set; }
+        public Employee Employee{ get; set; }
+        public Project Project { get; set; }
     }
 }

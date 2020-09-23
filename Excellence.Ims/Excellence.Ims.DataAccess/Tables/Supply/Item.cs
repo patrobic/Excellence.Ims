@@ -6,13 +6,12 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Supply
 {
-    public class Item
+    public class Item : Base
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
         public Category Category { get; set; } // TODO change to Category table type
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<Product> Product { get; set; } // REMOVE?
 
+        // public int Item_ProductId { get; set; }
+        public virtual ICollection<Item_Product> Item_Product { get; set; }
     }
 }
