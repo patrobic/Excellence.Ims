@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Property
 {
-    public class Tag : Base
+    public class Tag : BaseId
     {
 
     }

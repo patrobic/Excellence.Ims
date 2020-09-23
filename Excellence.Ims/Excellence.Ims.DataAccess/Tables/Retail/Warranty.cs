@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Retail
 {
-    public class Warranty : BaseNamed
+    public class Warranty : BaseName
     {
         public int Years { get; set; }
     }

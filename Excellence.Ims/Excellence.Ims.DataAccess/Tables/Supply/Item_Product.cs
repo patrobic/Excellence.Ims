@@ -9,8 +9,10 @@ namespace Excellence.Ims.DataAccess.Tables.Supply
     {
         public int ItemId { get; set; }
         public virtual Item Item { get; set; }
+
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
+
         public int Quantity { get; set; }
     }
 }

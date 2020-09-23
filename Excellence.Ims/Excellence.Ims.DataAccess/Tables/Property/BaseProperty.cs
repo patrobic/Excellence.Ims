@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Property
 {
-    public class BaseProperty : Base
+    public class BaseProperty : BaseId
     {
         public Product Product { get; set; }
 

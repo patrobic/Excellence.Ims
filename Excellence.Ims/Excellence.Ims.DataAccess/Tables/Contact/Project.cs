@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Entity
 {
-    public class Project : BaseNamed
+    public class Project : BaseName
     {
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Contact
 {
-    public abstract class BaseContact : Base
+    public abstract class BaseContact : BaseId
     {
         public string Email { get; set; }
         public string Phone { get; set; }

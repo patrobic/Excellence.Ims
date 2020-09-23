@@ -1,4 +1,5 @@
 ﻿using Excellence.Ims.DataAccess.Tables.Property;
+using Excellence.Ims.DataAccess.Tables.Storage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,12 +7,11 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Supply
 {
-    public class Item : Base
+    public class Item : BaseDescDate
     {
-        public Category Category { get; set; } // TODO change to Category table type
-        public virtual ICollection<Product> Product { get; set; } // REMOVE?
+        public Category Category { get; set; }
+        public Location Location { get; set; }
 
-        // public int Item_ProductId { get; set; }
         public virtual ICollection<Item_Product> Item_Product { get; set; }
     }
 }

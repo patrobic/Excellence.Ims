@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Storage
 {
-    public class Location : BaseNamed
+    public class Location : BaseDesc
     {
-
+        public Location? Parent { get; set; }
+        public virtual ICollection<Location> Children { get; set; }
     }
 }

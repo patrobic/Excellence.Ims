@@ -32,28 +32,40 @@ namespace Excellence.Ims.DataAccess
         {
             base.OnModelCreating(builder);
 
+            OnModelCreatingItemOrderLink(builder);
+            OnModelCreatingItemProductLink(builder);
+        }
+
+        private void OnModelCreatingItemOrderLink(ModelBuilder builder)
+        {
             builder.Entity<PurchaseOrderLine>().HasOne(x => x.Order).WithMany(x => x.Lines).HasForeignKey(x => x.OrderId);
             builder.Entity<ManufactureOrderLine>().HasOne(x => x.Order).WithMany(x => x.Lines).HasForeignKey(x => x.OrderId);
             builder.Entity<SalesOrderLine>().HasOne(x => x.Order).WithMany(x => x.Lines).HasForeignKey(x => x.OrderId);
 
-            builder.Entity<Item_Product>().HasOne(x => x.Item).WithMany(x => x.Item_Product).HasForeignKey(x => x.ItemId);
-            builder.Entity<Item_Product>().HasOne(x => x.Product).WithMany(x => x.Item_Product).HasForeignKey(x => x.ProductId);
-            builder.Entity<Item>().HasMany(x => x.Item_Product).WithOne(x => x.Item).HasForeignKey(x => x.ItemId);
-            builder.Entity<Product>().HasMany(x => x.Item_Product).WithOne(x => x.Product).HasForeignKey(x => x.ProductId);
-
-            // Direct Item-Product Linkage
-            builder.Entity<Product>().HasMany(x => x.Item).WithMany(x => x.Product); // Forward
-            builder.Entity<Item>().HasMany(x => x.Product).WithMany(x => x.Item); // Reverse (probably redundant)
-
-            builder.Entity<Item_Product>().HasKey(p => new { p.ItemId, p.ProductId}).HasName("Id");
             builder.Entity<PurchaseOrderLine>().HasKey(p => new { p.OrderId, p.ItemId }).HasName("Id");
             builder.Entity<ManufactureOrderLine>().HasKey(p => new { p.OrderId, p.ProductId }).HasName("Id");
             builder.Entity<SalesOrderLine>().HasKey(p => new { p.OrderId, p.ProductId }).HasName("Id");
+        }
 
+        private void OnModelCreatingItemProductLink(ModelBuilder builder)
+        {
             builder.Entity<Product>().HasOne(x => x.Parent).WithMany(x => x.Children);
             builder.Entity<Product>().HasMany(x => x.CrossSoldBy).WithMany(x => x.CrossSells);
             builder.Entity<Product>().HasMany(x => x.UpSoldBy).WithMany(x => x.UpSells);
 
+            builder.Entity<Item_Product>().HasOne(x => x.Item).WithMany(x => x.Item_Product).HasForeignKey(x => x.ItemId);
+            builder.Entity<Item_Product>().HasOne(x => x.Product).WithMany(x => x.Item_Product).HasForeignKey(x => x.ProductId);
+
+            builder.Entity<Location>().HasOne(x => x.Parent).WithMany(x => x.Children);
+
+            //builder.Entity<Item>().HasMany(x => x.Item_Product).WithOne(x => x.Item).HasForeignKey(x => x.ItemId);
+            //builder.Entity<Product>().HasMany(x => x.Item_Product).WithOne(x => x.Product).HasForeignKey(x => x.ProductId);
+
+            // Direct Item-Product Linkage
+            //builder.Entity<Product>().HasMany(x => x.Item).WithMany(x => x.Product); // Forward
+            //builder.Entity<Item>().HasMany(x => x.Product).WithMany(x => x.Item); // Reverse (probably redundant)
+
+            builder.Entity<Item_Product>().HasKey(p => new { p.ItemId, p.ProductId }).HasName("Id");
         }
 
         // Supply

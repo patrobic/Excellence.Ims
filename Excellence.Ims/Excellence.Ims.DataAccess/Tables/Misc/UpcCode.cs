@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Misc
 {
-    public class UpcCode : Base
+    public class UpcCode : BaseId
     {
         public Product Product { get; set; }
         public string Upc { get; set; }

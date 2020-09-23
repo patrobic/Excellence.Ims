@@ -6,17 +6,17 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Order
 {
-    public abstract class BaseOrder : BaseNamed
+    public abstract class BaseOrder : BaseDescDate
     {
-        public DateTime OrderDate { get; set; }
         public decimal Value { get; set; }
         public bool Complete { get; set; }
     }
 
-    public abstract class BaseOrderLine // should have Composite ID on derived classes { Product, Order }
+    public abstract class BaseOrderLine : BaseIdDate
     {
         public int Quantity { get; set; }
         public decimal PriceAdjustment { get; set; }
+        public bool Complete { get; set; }
     }
 
 }
