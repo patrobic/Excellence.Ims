@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables
 {
-    public class Item
+    public abstract class Base
     {
-        [Key]
         public int Id { get; set; }
+    }
+
+    public abstract class BaseNamed : Base
+    {
         public string Title { get; set; }
         public string Description { get; set; }
-        public string Category { get; set; } // TODO change to Category table type
-        public virtual ICollection<Product> Product { get; set; }
-
     }
 }
