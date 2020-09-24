@@ -1,0 +1,39 @@
+﻿# Database Outline
+## Supply
+    Item - Node
+    Product - Node
+    ProductInfo - Extension Table
+    Bundling - Join
+
+## Order
+    PurchaseOrder - Node
+    ManufactureOrder - Node
+    SalesOrder - Node
+    
+    PurchaseOrderLine - Join
+    ManufactureOrderLine - Join
+    SalesOrderLine - Join
+    
+## Contact
+    Client - Leaf
+    Employee - Leaf
+    Supplier - Leaf
+    
+## Property
+    Category - Multi Level
+    AttributeKey - Key-Value Pair
+    AttributeValue - Key-Value Pair
+    Tag - Leaf
+    
+## Storage
+    Location - Multi Level
+
+## Misc
+    Project - Node
+    StockAdjustment - Meta
+    UpcCode - Data Resource
+
+## Retail
+    ShippingClass - Loose Enum
+    Warranty - Loose Enum
+    Type - Strict Enum

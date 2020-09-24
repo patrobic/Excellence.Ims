@@ -7,6 +7,6 @@ namespace Excellence.Ims.DataAccess.Tables.Property
 {
     public class Category : BaseName
     {
-        public virtual ICollection<Product> Products { get; set; }
+
     }
 }

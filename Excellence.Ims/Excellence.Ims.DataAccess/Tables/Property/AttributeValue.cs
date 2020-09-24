@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables.Property
 {
-    public class AttributeName : BaseId
+    public class AttributeValue : BaseName
     {
-        public string Name { get; set; }
-        public Category Category { get; set; }
+        public AttributeKey Key { get; set; }
     }
 }

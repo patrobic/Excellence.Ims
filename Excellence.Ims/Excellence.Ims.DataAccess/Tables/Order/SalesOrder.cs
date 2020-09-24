@@ -1,5 +1,5 @@
 ﻿using Excellence.Ims.DataAccess.Tables.Contact;
-using Excellence.Ims.DataAccess.Tables.Entity;
+using Excellence.Ims.DataAccess.Tables.Misc;
 using Excellence.Ims.DataAccess.Tables.Supply;
 using System;
 using System.Collections.Generic;

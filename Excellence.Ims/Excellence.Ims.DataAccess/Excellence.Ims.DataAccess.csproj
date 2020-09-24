@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Folder Include="Functions\" />
+    <Folder Include="Scripts\" />
     <Folder Include="Views\" />
   </ItemGroup>
 
