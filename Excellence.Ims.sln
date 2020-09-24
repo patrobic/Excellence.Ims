@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.Test", "Excellence.Ims.Test\Excellence.Ims.Test.csproj", "{148B52DA-3B4A-4604-BC50-01CA79284E99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.Test", "Projects\Excellence.Ims.Test\Excellence.Ims.Test.csproj", "{148B52DA-3B4A-4604-BC50-01CA79284E99}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A233DBAB-991C-4726-BAEE-3E3E6A4A2996} = {A233DBAB-991C-4726-BAEE-3E3E6A4A2996}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.UwpApp", "Excellence.Ims.UwpApp\Excellence.Ims.UwpApp.csproj", "{4EE08D17-D1F4-4972-A90B-B0606E9211C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.UwpApp", "Projects\Excellence.Ims.UwpApp\Excellence.Ims.UwpApp.csproj", "{4EE08D17-D1F4-4972-A90B-B0606E9211C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.DataAccess", "Excellence.Ims.DataAccess\Excellence.Ims.DataAccess.csproj", "{8D35BDFF-2B8C-4CFC-877D-C3D30ACFB778}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.DataAccess", "Projects\Excellence.Ims.DataAccess\Excellence.Ims.DataAccess.csproj", "{8D35BDFF-2B8C-4CFC-877D-C3D30ACFB778}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.BusinessLogic", "Excellence.Ims.BusinessLogic\Excellence.Ims.BusinessLogic.csproj", "{A233DBAB-991C-4726-BAEE-3E3E6A4A2996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excellence.Ims.BusinessLogic", "Projects\Excellence.Ims.BusinessLogic\Excellence.Ims.BusinessLogic.csproj", "{A233DBAB-991C-4726-BAEE-3E3E6A4A2996}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8D35BDFF-2B8C-4CFC-877D-C3D30ACFB778} = {8D35BDFF-2B8C-4CFC-877D-C3D30ACFB778}
 	EndProjectSection
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Excellence.Ims.Database", "Excellence.Ims.Database\Excellence.Ims.Database.sqlproj", "{386CFE72-F0B8-460C-9B6E-ADB3D6241CAB}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Excellence.Ims.Database", "Projects\Excellence.Ims.Database\Excellence.Ims.Database.sqlproj", "{386CFE72-F0B8-460C-9B6E-ADB3D6241CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.WebApp", "Excellence.Ims.WebApp\Excellence.Ims.WebApp.csproj", "{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Ims.WebApp", "Projects\Excellence.Ims.WebApp\Excellence.Ims.WebApp.csproj", "{DD149D75-24B1-4A49-BF5D-8E162E1B4EC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
