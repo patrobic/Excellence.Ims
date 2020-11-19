@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace Excellence.Ims.DataAccess.Tables.SubClass
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
     //public class Physical
     //{
@@ -37,5 +32,6 @@ namespace Excellence.Ims.DataAccess.Tables.SubClass
         public float Width { get; set; }
         public float Height { get; set; }
         public float Weight { get; set; }
+        public Location Location { get; set; }
     }
 }

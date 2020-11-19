@@ -1,4 +1,4 @@
-﻿namespace Excellence.Ims.DataAccess.Tables.Supply
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
     public class Bundling
     {

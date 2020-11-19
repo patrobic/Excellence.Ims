@@ -1,9 +1,4 @@
-﻿using Excellence.Ims.DataAccess.Tables.Supply;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Excellence.Ims.DataAccess.Tables.Property
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
     public class Category : BaseName
     {

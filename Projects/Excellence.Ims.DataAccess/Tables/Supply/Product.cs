@@ -1,17 +1,23 @@
-﻿using Excellence.Ims.DataAccess.Tables.Property;
-using Excellence.Ims.DataAccess.Tables.Storage;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using AttributeValue = Excellence.Ims.DataAccess.Tables.Property.AttributeValue;
-using Type = Excellence.Ims.DataAccess.Tables.Retail.Type;
+using Type = Excellence.Ims.DataAccess.Tables.Type;
 
-namespace Excellence.Ims.DataAccess.Tables.Supply
+namespace Excellence.Ims.DataAccess.Tables
 {
-    public class Product : BaseDescDate
+    public class Product : IDescribable, IModifiable
     {
         #region Primitive
+
+        [Required]
+        public int Id { get; set; }
+        [Required]
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public DateTime CreateDate { get; set; }
+        public DateTime ModifyDate { get; set; }
 
         [Required]
         public string Sku { get; set; }

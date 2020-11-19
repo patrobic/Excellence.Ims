@@ -1,16 +1,28 @@
-﻿using Excellence.Ims.DataAccess.Tables.Contact;
-using Excellence.Ims.DataAccess.Tables.Misc;
-using Excellence.Ims.DataAccess.Tables.Supply;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Excellence.Ims.DataAccess.Tables.Order
+namespace Excellence.Ims.DataAccess.Tables
 {
-    public class PurchaseOrder : BaseOrder
+    public class PurchaseOrder : IOrder
     {
-        public virtual ICollection<PurchaseOrderLine> Lines { get; set; }
+        #region Primitive
+
+        #endregion
+
+        #region Foreign - One
+        
         public Supplier Supplier { get; set; }
         public Project Project { get; set; }
+
+        #endregion
+
+        #region Foreign - Many
+
+        public virtual ICollection<PurchaseOrderLine> Lines { get; set; }
+
+        #endregion
+
+        #region Inverse
+
+        #endregion
     }
 }

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
 
-namespace Excellence.Ims.DataAccess.Tables.Interface
+namespace Excellence.Ims.DataAccess.Tables
 {
     //public abstract class BaseDate
     //{
@@ -49,7 +46,7 @@ namespace Excellence.Ims.DataAccess.Tables.Interface
 
     public interface ICompletable : ICreatable
     {
-        public bool Complete { get; set; }
         public DateTime CompleteDate { get; set; }
+        public bool Complete { get; set; }
     }
 }

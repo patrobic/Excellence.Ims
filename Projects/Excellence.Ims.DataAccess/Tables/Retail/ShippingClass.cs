@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Excellence.Ims.DataAccess.Tables.Retail
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
     public class ShippingClass : BaseName
     {

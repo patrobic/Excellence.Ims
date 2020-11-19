@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Excellence.Ims.DataAccess.Tables.Storage
+namespace Excellence.Ims.DataAccess.Tables
 {
     public class Location : BaseDesc
     {

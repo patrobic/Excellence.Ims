@@ -1,20 +1,20 @@
-﻿using Excellence.Ims.DataAccess.Tables.Retail;
-using Excellence.Ims.DataAccess.Tables.SubClass;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Excellence.Ims.DataAccess.Tables.Supply
+namespace Excellence.Ims.DataAccess.Tables
 {
     [Table("Product")]
-    public class ProductInfo : BaseId
+    public class ProductInfo : IIdentifiable, IMeasurable
     {
         #region Primitive
 
-        //public float Weight { get; set; }
-        //public int Length { get; set; }
-        //public int Width { get; set; }
-        //public int Height { get; set; }
-        
-        public Physical Physical { get; set; }
+        [Required]
+        public int Id { get; set; }
+
+        public float Length { get; set; }
+        public float Width { get; set; }
+        public float Height { get; set; }
+        public float Weight { get; set; }
 
         public bool IsFeatured { get; set; }
         public bool Published { get; set; }

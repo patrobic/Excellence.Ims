@@ -1,16 +1,28 @@
-﻿using Excellence.Ims.DataAccess.Tables.Supply;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace Excellence.Ims.DataAccess.Tables.Order
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
-    public class ManufactureOrderLine : BaseOrderLine
+    public class ManufactureOrderLine : IOrderLine
     {
-        public Product Product { get; set; }
+        #region Primitive
+
         public int ProductId { get; set; }
-        public ManufactureOrder Order { get; set; }
         public int OrderId { get; set; }
+
+        #endregion
+
+        #region Foreign - One
+
+        public Product Product { get; set; }
+        public ManufactureOrder Order { get; set; }
+
+        #endregion
+
+        #region Foreign - Many
+
+        #endregion
+
+        #region Inverse
+
+        #endregion
+
     }
 }

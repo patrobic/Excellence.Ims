@@ -1,16 +1,28 @@
-﻿using Excellence.Ims.DataAccess.Tables.Contact;
-using Excellence.Ims.DataAccess.Tables.Misc;
-using Excellence.Ims.DataAccess.Tables.Supply;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Excellence.Ims.DataAccess.Tables.Order
+namespace Excellence.Ims.DataAccess.Tables
 {
-    public class ManufactureOrder : BaseOrder
+    public class ManufactureOrder : IOrder
     {
-        public virtual ICollection<ManufactureOrderLine> Lines { get; set; }
-        public Employee Employee{ get; set; }
+        #region Primitive
+
+        #endregion
+
+        #region Foreign - One
+
+        public Employee Employee { get; set; }
         public Project Project { get; set; }
+
+        #endregion
+
+        #region Foreign - Many
+
+        public virtual ICollection<ManufactureOrderLine> Lines { get; set; }
+ 
+        #endregion
+
+        #region Inverse
+
+        #endregion
     }
 }
