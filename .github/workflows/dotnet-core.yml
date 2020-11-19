@@ -1,0 +1,33 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Modules
+      uses: actions/checkout@v2
+      with: 
+        submodules: recursive
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build Solution
+      run: dotnet build --configuration Release --no-restore
+    - name: Execute Tests
+      run: dotnet test --no-restore --verbosity normal
+    - name: Generate Artifact
+      uses: actions/upload-artifact@v2.2.1
+      with:
+       name: artifact
+       path: Projects/*/bin/Release/net5.0/*.dll
