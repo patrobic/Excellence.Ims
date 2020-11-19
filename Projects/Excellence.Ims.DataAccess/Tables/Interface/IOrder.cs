@@ -1,10 +1,8 @@
-﻿using Excellence.Ims.DataAccess.Tables.Interface;
-
-namespace Excellence.Ims.DataAccess.Tables
+﻿namespace Excellence.Ims.DataAccess.Tables
 {
     public interface IOrder : IDescribable, ICompletable, IValueable
     {
-        public decimal Value { get; set; }
+
     }
 
     public interface IOrderLine : IDescribable, ICompletable
@@ -12,5 +10,4 @@ namespace Excellence.Ims.DataAccess.Tables
         public int Quantity { get; set; }
         public decimal PriceAdjustment { get; set; }
     }
-
 }

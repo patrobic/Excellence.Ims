@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Excellence.Ims.DataAccess.Tables
 {
-    public interface IValueable
+    public interface IItem : IDescribable, IMeasurable, IModifiable, ILocatable
     {
-        public decimal Cost { get; set; }
+
     }
 }

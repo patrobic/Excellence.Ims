@@ -37,3 +37,6 @@
     ShippingClass - Loose Enum
     Warranty - Loose Enum
     Type - Strict Enum
+
+## THINGS TO ADD
+    SaleDiscount

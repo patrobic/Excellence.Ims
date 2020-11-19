@@ -1,22 +1,35 @@
-﻿namespace Excellence.Ims.DataAccess.Tables
+﻿using System;
+
+namespace Excellence.Ims.DataAccess.Tables
 {
     public class SalesOrderLine : IOrderLine
     {
         #region Primitive
 
-        #endregion
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
-        #region Foreign - One
-        
+        public DateTime CreateDate { get; set; }
+        public DateTime CompleteDate { get; set; }
+        public bool Complete { get; set; }
+
+        public int Quantity { get; set; }
+        public decimal PriceAdjustment { get; set; }
+
         public int ProductId { get; set; }
         public int OrderId { get; set; }
 
         #endregion
 
-        #region Foreign - Many
+        #region Foreign - One
 
         public Product Product { get; set; }
         public SalesOrder Order { get; set; }
+
+        #endregion
+
+        #region Foreign - Many
 
         #endregion
 

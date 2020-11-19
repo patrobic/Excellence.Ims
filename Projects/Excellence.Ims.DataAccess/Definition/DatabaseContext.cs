@@ -1,14 +1,7 @@
 ﻿using Excellence.Ims.DataAccess.Tables;
-using Excellence.Ims.DataAccess.Tables.Contact;
-using Excellence.Ims.DataAccess.Tables.Order;
-using Excellence.Ims.DataAccess.Tables.Property;
-using Excellence.Ims.DataAccess.Tables.Retail;
-using Excellence.Ims.DataAccess.Tables.Storage;
-using Excellence.Ims.DataAccess.Tables.Supply;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AttributeValue = Excellence.Ims.DataAccess.Tables.Property.AttributeValue;
-using Type = Excellence.Ims.DataAccess.Tables.Retail.Type;
+using AttributeValue = Excellence.Ims.DataAccess.Tables.AttributeValue;
 
 namespace Excellence.Ims.DataAccess
 {
@@ -26,8 +19,7 @@ namespace Excellence.Ims.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=blog.db");
-
+            // optionsBuilder.UseSqlServer("Data Source=blog.db");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -73,7 +65,7 @@ namespace Excellence.Ims.DataAccess
         #region Property
 
         public DbSet<Category> Category { get; set; }
-        public DbSet<AttributeKey> AttributeName { get; set; }
+        public DbSet<AttributeKey> AttributeKey { get; set; }
         public DbSet<AttributeValue> AttributeValue { get; set; }
         public DbSet<Tag> Tag { get; set; }
 

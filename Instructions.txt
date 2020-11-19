@@ -11,6 +11,9 @@
 	Set Package Manager Console project to ...DataAccess
 	EntityFrameworkCore\Update-Database –verbose
 
+## One Line Drop + Recreate
+	update-database -TargetMigration:0 | update-database -force
+	
 ## Reverse Engineer (From DB)
 	Right Click Project
 	Select "EF Core Power Tools"

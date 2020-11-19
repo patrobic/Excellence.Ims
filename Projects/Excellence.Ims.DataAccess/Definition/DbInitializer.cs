@@ -1,15 +1,19 @@
-﻿using Excellence.Ims.DataAccess.Tables.Retail;
+﻿using CsvHelper;
+using Excellence.Ims.DataAccess.Definition;
+using Excellence.Ims.DataAccess.Tables;
 using System.Collections.Generic;
-using System.Text;
-using Excellence.Ims.DataAccess.Tables.Property;
-using Excellence.Ims.DataAccess.Tables.Storage;
+using System.Data.Common;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 
 namespace Excellence.Ims.DataAccess
 {
     public class DbInitializer
     {
-        private DatabaseContext _context;
+        private string _path = Directory.GetCurrentDirectory(); // TODO: get path of Data project/Csv folder
+
+        private readonly DatabaseContext _context;
 
         readonly List<string> Categories = new List<string>
         {
@@ -46,14 +50,22 @@ namespace Excellence.Ims.DataAccess
             //InitializeRetail();
             //InitializeStorage();
 
+            LoadCsv();
+
             _context.SaveChanges();
+        }
+
+        private void LoadCsv()
+        {
+            CsvLoader loader = new CsvLoader(_context, _path);
+            loader.LoadData(DataTypes.Types);
         }
 
         private void InitializeProperties()
         {
             Categories.ForEach(x => _context.Category.Add(new Category() { Name = x }));
 
-            _context.AttributeName.AddRange(new AttributeKey[]
+            _context.AttributeKey.AddRange(new AttributeKey[]
             {
 
             });
@@ -80,7 +92,7 @@ namespace Excellence.Ims.DataAccess
         {
             // Location (Toolboxes)
             Enumerable.Range(1, 3).ToList().ForEach(x => _context.Location.Add(new Location { Name = "ToolBox1" }));
-            
+
             // Location (Organizers)
             Enumerable.Range(1, 3).ToList().ForEach(x =>
             {

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98C3DBA7-37E0-41CA-9D33-34AFED726C53}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Excellence.Ims.Data</RootNamespace>
+    <AssemblyName>Excellence.Ims.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Csv\Contact\Client.csv" />
+    <None Include="Csv\Contact\Employee.csv" />
+    <None Include="Csv\Contact\Supplier.csv" />
+    <None Include="Csv\Misc\UpcCode.csv" />
+    <None Include="Csv\Misc\StockAdjustment.csv" />
+    <None Include="Csv\Misc\Project.csv" />
+    <None Include="Csv\Order\SalesOrder.csv" />
+    <None Include="Csv\Order\SalesOrderLine.csv" />
+    <None Include="Csv\Order\PurchaseOrder.csv" />
+    <None Include="Csv\Order\ManufactureOrder.csv" />
+    <None Include="Csv\Order\ManufactureOrderLine.csv" />
+    <None Include="Csv\Order\PurchaseOrderLine.csv" />
+    <None Include="Csv\Property\AttributeKey.csv" />
+    <None Include="Csv\Property\AttributeValue.csv" />
+    <None Include="Csv\Property\Tag.csv" />
+    <None Include="Csv\Property\Category.csv" />
+    <None Include="Csv\Retail\ShippingClass.csv" />
+    <None Include="Csv\Retail\Type.csv" />
+    <None Include="Csv\Retail\Warranty.csv" />
+    <None Include="Csv\Storage\Location.csv" />
+    <None Include="Csv\Supply\ProductInfo.csv" />
+    <None Include="Csv\Supply\Item.csv" />
+    <None Include="Csv\Supply\Product.csv" />
+    <None Include="Csv\Supply\Bundling.csv" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,4 +1,6 @@
-﻿namespace Excellence.Ims.DataAccess.Tables
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Excellence.Ims.DataAccess.Tables
 {
     //public abstract class BaseContact : BaseId
     //{
@@ -23,14 +25,22 @@
     //    public string CompanyPhone { get; set; }
     //}
 
-    public interface IContact
+    public interface IAddress
     {
-        public string Email { get; set; }
-        public string Phone { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
+        [DataType(DataType.PostalCode)]
+        public string PostalCode { get; set; }
         public string Country { get; set; }
+    }
+
+    public interface IContact
+    {
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; }
     }
 
     public interface IPerson : IContact
@@ -42,7 +52,9 @@
     public interface ICompany : IContact
     {
         public string CompanyName { get; set; }
+        [DataType(DataType.EmailAddress)]
         public string CompanyEmail { get; set; }
+        [DataType(DataType.PhoneNumber)]
         public string CompanyPhone { get; set; }
     }
 }

@@ -32,6 +32,5 @@
         public float Width { get; set; }
         public float Height { get; set; }
         public float Weight { get; set; }
-        public Location Location { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using Excellence.Ims.DataAccess.Tables.Order;
-using Excellence.Ims.DataAccess.Tables.Retail;
-using Excellence.Ims.DataAccess.Tables.Storage;
-using Excellence.Ims.DataAccess.Tables.Supply;
+﻿using Excellence.Ims.DataAccess.Tables;
 using Microsoft.EntityFrameworkCore;
 
 namespace Excellence.Ims.DataAccess
@@ -37,8 +34,10 @@ namespace Excellence.Ims.DataAccess
         private void ProductLinking()
         {
             _builder.Entity<Product>().HasOne(x => x.Parent).WithMany(x => x.Children);
-            _builder.Entity<Product>().HasMany(x => x.CrossSoldBy).WithMany(x => x.CrossSells);
-            _builder.Entity<Product>().HasMany(x => x.UpSoldBy).WithMany(x => x.UpSells);
+            //_builder.Entity<Product>().HasMany(x => x.CrossSoldBy).WithMany(x => x.CrossSells);
+            _builder.Entity<Product>().ToTable("CrossSells").HasMany(x => x.CrossSoldBy).WithMany(x => x.CrossSells);
+            //_builder.Entity<Product>().HasMany(x => x.UpSoldBy).WithMany(x => x.UpSells);
+            _builder.Entity<Product>().ToTable("UpSells").HasMany(x => x.UpSoldBy).WithMany(x => x.UpSells);
 
             _builder.Entity<Bundling>().HasOne(x => x.Item).WithMany(x => x.Bundling).HasForeignKey(x => x.ItemId);
             _builder.Entity<Bundling>().HasOne(x => x.Product).WithMany(x => x.Bundling).HasForeignKey(x => x.ProductId);

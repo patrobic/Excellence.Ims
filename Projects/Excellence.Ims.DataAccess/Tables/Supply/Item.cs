@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Excellence.Ims.DataAccess.Tables
 {
-    public class Item : IDescribable, IMeasurable, IModifiable
+    public class Item : IItem
     {
         #region Primitive
-  
-        [Required]
+
+        [Required, Display(Name = "Id")]
         public int Id { get; set; }
-        [Required]
+        [Required, Display(Name = "Item Name")]
         public string Name { get; set; }
+        [Display(Name = "Item Description")]
         public string Description { get; set; }
 
         public float Length { get; set; }

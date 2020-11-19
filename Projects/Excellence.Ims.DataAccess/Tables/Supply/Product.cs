@@ -6,7 +6,7 @@ using Type = Excellence.Ims.DataAccess.Tables.Type;
 
 namespace Excellence.Ims.DataAccess.Tables
 {
-    public class Product : IDescribable, IModifiable
+    public class Product : IItem
     {
         #region Primitive
 
@@ -15,6 +15,11 @@ namespace Excellence.Ims.DataAccess.Tables
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public float Length { get; set; }
+        public float Width { get; set; }
+        public float Height { get; set; }
+        public float Weight { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime ModifyDate { get; set; }
@@ -31,6 +36,7 @@ namespace Excellence.Ims.DataAccess.Tables
         #region Foreign - One
 
         public Location Location { get; set; }
+
         public ProductInfo ProductInfo { get; set; }
         public Product Parent { get; set; }
 
